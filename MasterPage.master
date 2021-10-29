@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- We enable AJAX controls -->
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true"></asp:ToolkitScriptManager>
+
+        <!-- We set the sitemap datasource (So we can access pages from the menu and restrict them according to roles etc) -->
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+        <div id="header">
+            <div id="login">
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <AnonymousTemplate>
+                        <asp:Label ID="WelcomeLabel" runat="server" ForeColor="White" Text="Welcome, Guest "></asp:Label>
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <asp:Label ID="UserLabel" runat="server" ForeColor="White" Text="User: "></asp:Label>
+                        <asp:LoginName ID="LoginName1" runat="server" ForeColor="White" />
+              <asp:LoginStatus ID="LoginStatus2" runat="server" LogoutPageUrl="loggedout.aspx" LogoutAction="Redirect" />
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <br />
+            <div class="div-centerer">
+                <asp:Image ID="Logo" runat="server" CssClass="logo" ImageUrl="~/images/BEUMER-icon.png"></asp:Image>
+                <div class="heading">Dashboard Web</div>
+            </div>
+        </div>
+
+        <div id="container">
+            <!-- We set a TreeView and a Menu. Both hold the same functionality, but are shown depending on the screen size for layout purposes -->
+            <div id="menu">
+                <div id="tree">
+
+                    <br />
+                    <asp:TreeView ID="TreeView1" DataSourceID="SiteMapDataSource1" runat="server" NodeIndent="10" ShowExpandCollapse="False" NodeStyle-CssClass="menunode" HoverNodeStyle-CssClass="menunodehover" SelectedNodeStyle-CssClass="menunodeselected" RootNodeStyle-CssClass="rootnode" ParentNodeStyle-CssClass="parentnode">
+                    </asp:TreeView>
+                </div>
+
+                <div id="dropdown">
+                    <asp:Menu ID="Menu1" DataSourceID="SiteMapDataSource1" runat="server" StaticDisplayLevels="1" Orientation="Horizontal" CssClass="topmenu" StaticMenuItemStyle-CssClass="dropmenunode" DynamicMenuItemStyle-CssClass="dynamicmenunode" StaticEnableDefaultPopOutImage="False" StaticPopOutImageUrl="~/images/arrowdw.png" StaticHoverStyle-BackColor="#6dc97a" StaticHoverStyle-ForeColor="White" StaticSelectedStyle-BackColor="#5ca166" DynamicHoverStyle-BackColor="#6dc97a" DynamicHoverStyle-ForeColor="White" DynamicSelectedStyle-ForeColor="White">
+                    </asp:Menu>
+                </div>
+            </div>
+
+            <div id="content">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

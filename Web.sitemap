@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Default.aspx" title="Projects"  description="Search projects">
+      <siteMapNode url="write/manageprojects.aspx" title="Manage projects"  description="" />
+      <siteMapNode url="write/createproject.aspx" title="Create project" description="" />
+      <siteMapNode url="admin/manageusers.aspx" title="Manage users"  description="" />
+    </siteMapNode>
+  
+  
+</siteMap> 
+ 

@@ -1,0 +1,657 @@
+﻿body {
+    background-color: white;
+    font-family: Arial, Sans-Serif;
+    margin: 0px;
+}
+
+.loginImage {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.content {
+    width: 100vw;
+    height: 10vh;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 10vh;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 10vh;
+    width: 60vw;
+}
+
+.contentFrame {
+    padding-top: 20px;
+    border: solid 3px;
+    border-color: #b4b4d9;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    background-color: #e9e9f5;
+}
+
+.GridPager a, .GridPager span {
+    display: block;
+    height: 15px;
+    width: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.GridPager a {
+    background-color: #f5f5f5;
+    color: #969696;
+    border: 1px solid #969696;
+}
+
+.GridPager span {
+    background-color: #A1DCF2;
+    color: #000;
+    border: 1px solid #3AC0F2;
+}
+
+th {
+    background: #4961ba;
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background: #dfe3f2;
+}
+
+tr:nth-child(odd) {
+    background: #fff;
+}
+
+.centered-grid-item {
+    margin: auto;
+}
+
+.heading {
+    font-size: 180%;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    float: left;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+
+#customCircle {
+    background-color: #ffbe26;
+}
+
+#defaultCircle {
+    background-color: #5576a3;
+}
+
+#disableCircle {
+    background-color: #a8a8a8;
+}
+
+.div-centerer {
+    display: flex;
+    justify-content: center;
+}
+
+.circle-content {
+    width: 33%;
+    text-align: center;
+    float: left;
+    visibility: hidden;
+}
+
+.circle {
+    display: inline-block;
+    width: 30%;
+    padding-bottom: 30%;
+    border-radius: 60%;
+    border: 1px solid #333;
+}
+
+.circle-content p {
+    font-size: 11px;
+    color: #666;
+}
+
+.colorGuide {
+    width: 10%;
+    margin-left: 220px;
+}
+
+.EditPanelDiv {
+    float: none;
+    display: flex;
+    justify-content: center;
+}
+
+.disabled {
+    background-color: #a8a8a8;
+    border: solid;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: default;
+}
+
+.searchButton, .pinned, .unpinned, .editButton, .favoriteButton, .favorited, .greenButton {
+    background-color: #4CAF50; /* Green */
+    border: solid;
+    border-color: #72d476;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+    .searchButton:hover, .pinned:hover, .unpinned:hover, .editButton:hover, .favoriteButton:hover, favorited:hover, .greenButton:hover {
+        background-color: #7be37f; /* Green */
+        border: solid;
+        border-color: #97e89a;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+.blueButton {
+    background-color: #396ba8;
+    border: solid;
+    border-color: #5589c9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+    .blueButton:hover {
+        background-color: #709acc;
+        border: solid;
+        border-color: #749fd4;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+.yellowButton {
+    background-color: #d6d633;
+    border: solid;
+    border-color: #f2f252;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+    .yellowButton:hover {
+        background-color: #f2f21d;
+        border: solid;
+        border-color: #fafa82;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.searchBox {
+    max-height: 25px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.btn {
+    /* Center the contents of the grid items. Making each grid item a Flex Container */
+    display: flex;
+    /* Horizontal and Vertical centering */
+    justify-content: center;
+    align-items: center;
+    background-color: #ffbe26;
+    border: solid;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-default {
+    /* Center the contents of the grid items. Making each grid item a Flex Container */
+    display: flex;
+    /* Horizontal and Vertical centering */
+    justify-content: center;
+    align-items: center;
+    background-color: #5576a3;
+    border: solid;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-disabled {
+    /* Center the contents of the grid items. Making each grid item a Flex Container */
+    display: flex;
+    /* Horizontal and Vertical centering */
+    justify-content: center;
+    align-items: center;
+    background-color: #b5b5b5;
+    border: solid;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: default;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #ffca4f;
+}
+
+
+.btn-default:hover {
+    background-color: #658bbf;
+}
+
+.projectName {
+    font-size: 180%;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.pageHeader {
+    font-size: 180%;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.contentCenterer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.urls-grid-container {
+    width: 85%;
+    grid-column-gap: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.InsideContent {
+    display: inline-block;
+}
+
+.ProjectData {
+    margin-bottom: 50px;
+}
+
+.folders-grid-container {
+    width: 85%;
+    grid-column-gap: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-data-grid-container {
+    float: left;
+    width: 100%;
+    display: grid;
+    padding: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-container {
+    float: left;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    text-align: center;
+}
+
+.stats-grid-container {
+    float: left;
+    display: grid;
+    grid-column-gap: 100px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 60%;
+    text-align: center;
+}
+
+.user-data-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+}
+
+.user-data-grid-item {
+    padding: 10px;
+    text-align: start;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: #565e85;
+    text-align: center;
+    float: left;
+}
+
+.searchBox {
+    width: 500px;
+}
+
+#search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+}
+
+#container {
+    width: 100%;
+    background-color: #FFFFFF;
+    float: left;
+    clear: left;
+}
+
+#login {
+    float: right;
+    margin: 5px 10px 0px 0px;
+}
+
+#menu {
+    width: 100%;
+    max-width: 200px;
+    clear: left;
+    float: left;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+#content {
+    width: 100%;
+    min-height: 500px;
+    border-left: 1px solid #CFCFFF;
+    float: left;
+    clear: left;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(218,218,218,1) 0%, rgba(238,238,238,1) 2%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+}
+
+.headingspan {
+    font-weight: bold;
+}
+
+.menunode {
+    color: #1c1c1c;
+}
+
+.menunodeselected {
+    font-weight: bold;
+}
+
+.menunodehover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.rootnode {
+    font-size: 120%;
+}
+
+.parentnode {
+    font-size: 100%;
+}
+
+.topmenu {
+    font-size: 18pt;
+    text-align: center;
+    background-color: #FFFFFF;
+    background-color: #eceff8;
+}
+
+.dropmenunode {
+    color: #FFFFFF;
+    background-color: #5ca166;
+    border: solid 2px;
+    border-color: #3b7543;
+    border-radius: 15px;
+    margin: 0px 2px;
+    width: 250px;
+    font-weight: bold;
+}
+
+.dynamicmenunode {
+    color: #FFFFFF;
+    background-color: #b6dbbb;
+    margin: 0px 2px;
+    width: 267px;
+}
+
+#tree {
+    display: none;
+}
+
+#dropdown {
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+.lightblue {
+    background-color: #ccccff;
+}
+
+.boldtext {
+    font-weight: bold;
+}
+
+.floatright {
+    float: right;
+}
+
+.textbox {
+    width: 70%;
+}
+
+
+
+@media screen and (min-width: 460px) {
+    .heading {
+        font-size: 266%;
+    }
+
+    .footerSpan {
+        font-size: 120%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    #content {
+        width: 90%;
+        float: right;
+        clear: none;
+    }
+
+    #menu {
+        width: 10%;
+        border-bottom: none;
+    }
+
+    .circle-content {
+        visibility: visible;
+    }
+
+    .EditPanelDiv {
+        float: right;
+        margin-right: 300px;
+    }
+
+    .searchContainer {
+        margin-left: 230px;
+    }
+
+    .urls-grid-container {
+        width: 60%;
+        padding: 10px;
+        grid-column-gap: 50px;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin-left: 7%;
+        float: left;
+    }
+
+    .folders-grid-container {
+        margin-left: 100px;
+        float: left;
+        width: 10%;
+        display: grid;
+        padding: 10px;
+        grid-column-gap: 50px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    #tree {
+        display: block;
+    }
+
+    #dropdown {
+        display: none;
+    }
+
+    .pageHeader {
+        font-size: 180%;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        padding-right: 280px;
+    }
+
+    .contentFrame {
+        margin-left: 12.5%;
+        margin-right: 27.5%;
+    }
+
+    .project-data-grid-container {
+        display: grid;
+        width: 60%;
+        grid-column-gap: 250px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .projectName {
+        font-size: 180%;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        padding-right: 280px;
+    }
+
+    .contentCenterer {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        margin-right: 15%;
+    }
+
+    .grid-container {
+        width: 40%;
+    }
+
+    .textbox {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1130px) {
+    #wrapper {
+        width: 95%;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    #wrapper {
+        width: 90%;
+    }
+}
